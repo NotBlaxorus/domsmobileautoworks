@@ -1,530 +1,1232 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dom’s Mobile AutoWorks | Honest Mobile Mechanic in Santa Rosa & North Bay</title>
-  <meta name="description" content="Dom’s Mobile AutoWorks – On-site oil changes, brake service, and spark plug replacements. Fast, honest mobile mechanic serving Santa Rosa, Rohnert Park, Cotati, Novato, and the North Bay." />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dom's Mobile AutoWorks | Mobile Mechanic – Sonoma County</title>
+  <meta name="description" content="Dom's Mobile AutoWorks – honest mobile mechanic serving Santa Rosa & Sonoma County. Oil changes, brakes, suspension, batteries & more. We come to you."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0e1116;
-      --card:#141924;
-      --muted:#8ea0b5;
-      --txt:#e8eef6;
-      --brand:#51c27b;
-      --brand-2:#2aa3ff;
-      --accent:#ffd36b;
-      --danger:#ff6b6b;
-      --radius:14px;
-      --shadow:0 10px 25px rgba(0,0,0,.25);
-      --shadow-sm:0 6px 18px rgba(0,0,0,.18);
-      --max:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0e13,#0e1116);color:var(--txt);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-    a{color:var(--brand-2);text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:var(--max);margin:auto;padding:0 20px}
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#26b47d);display:grid;place-items:center;box-shadow:var(--shadow-sm)}
-    .logo svg{width:24px;height:24px}
-    .brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
-    .nav a.btn{padding:10px 16px;border-radius:12px;background:var(--brand);color:#08110b;font-weight:700}
-
-    /* Hero */
-    .hero{padding:68px 0 34px;background:radial-gradient(900px 300px at 70% -10%, rgba(42,163,255,.25), transparent), radial-gradient(900px 300px at 0% 0%, rgba(81,194,123,.18), transparent)}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    h2{font-size:40px;line-height:1.15;margin:0 0 10px}
-    .sub{color:var(--muted);margin:0 0 18px}
-    .cred{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
-    .cred .chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;font-size:13px;color:#cfe0f7}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-    .btn{padding:12px 16px;border-radius:12px;background:var(--brand);color:#05140a;font-weight:800;border:none;cursor:pointer}
-    .btn.secondary{background:rgba(255,255,255,.05);color:var(--txt);border:1px solid rgba(255,255,255,.1)}
-    .hero-card{background:linear-gradient(180deg,#131a27,#121621);border:1px solid rgba(255,255,255,.07);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero-card ul{margin:0;padding-left:18px;color:#cfe0f7}
-
-    /* Sections */
-    section{padding:46px 0}
-    .section-title{font-size:28px;margin:0 0 14px}
-    .grid{display:grid;gap:16px}
-    .services{grid-template-columns:repeat(12,1fr)}
-    .card{grid-column:span 6;background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-sm)}
-    .card h3{margin:0 0 6px}
-    .price{font-weight:800;color:var(--accent)}
-    .muted{color:var(--muted)}
-    .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(81,194,123,.15);border:1px solid rgba(81,194,123,.35);color:#c9ffdf;font-weight:700;font-size:12px}
-
-    /* Reviews */
-    .review{background:linear-gradient(180deg,#131922,#11151f);border:1px solid rgba(255,255,255,.06);padding:18px;border-radius:var(--radius)}
-    .stars{color:var(--accent);letter-spacing:2px}
-
-    /* Estimator & Gallery */
-    .est-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
-    .est-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-sm)}
-    .est-grid{display:grid;grid-template-columns:1fr 140px;gap:8px;align-items:center}
-    .est-grid label{font-weight:600}
-    .est-grid .qty{display:flex;gap:8px;align-items:center;justify-content:flex-end}
-    .est-grid select,.est-grid input[type="number"]{width:100%;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:#0f141e;color:var(--txt)}
-    .est-line{display:flex;justify-content:space-between;border-top:1px dashed rgba(255,255,255,.12);padding-top:10px;margin-top:10px}
-    .est-total{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.2);font-weight:800}
-    .note{color:var(--muted);font-size:13px}
-    .pill-group{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .radio-pill{position:relative;display:inline-flex;align-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);box-shadow:var(--shadow-sm);overflow:hidden}
-    .radio-pill input{appearance:none;-webkit-appearance:none;width:0;height:0;margin:0;opacity:0;position:absolute}
-    .radio-pill span{display:inline-block;padding:8px 14px;font-weight:700;color:#cfe0f7}
-    .radio-pill:hover{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.06)}
-    .radio-pill input:checked + span{background:var(--brand);color:#06130b}
-    .radio-pill.alt input:checked + span{background:var(--brand-2);color:#04121e}
-    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .photo-spot{min-height:200px;border-radius:14px;border:1px dashed rgba(255,255,255,.15);background:linear-gradient(180deg,#151b26,#121722);display:grid;place-items:center;color:#a9bad1}
-    .photo-spot small{color:#7f92ab}
-    @media (max-width: 900px){
-      .est-wrap{grid-template-columns:1fr}
-      .gallery{grid-template-columns:1fr}
-    }
-
-    /* FAQ */
-    #faq .grid{align-items:start} /* ensure columns size to their own content */
-    details{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px}
-    summary{cursor:pointer;font-weight:700}
-
-    /* CTA Section (Book) — make it pop */
-    #book{padding:0 0 46px}
-    .cta-shell{
-      margin-top:10px;
-      background:
-        radial-gradient(1000px 300px at 10% -20%, rgba(81,194,123,.18), transparent),
-        radial-gradient(900px 300px at 90% 0%, rgba(42,163,255,.20), transparent),
-        linear-gradient(180deg,#0f1521,#0f141d);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:20px;
-      box-shadow:0 18px 40px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);
-      padding:24px;
-    }
-    .cta-shell .header{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px
-    }
-    .cta-badge{
-      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
-      background:rgba(81,194,123,.15);border:1px solid rgba(81,194,123,.35);color:#c9ffdf;font-weight:800;font-size:12px
-    }
-    .cta-choices{
-      display:grid;grid-template-columns:1fr .9fr;gap:18px
-    }
-    .cta-card{
-      background:linear-gradient(180deg,#141b28,#111722);
-      border:1px solid rgba(255,255,255,.09);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:var(--shadow-sm)
-    }
-    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    .cta-btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:14px 16px;border-radius:12px;
-      background:var(--brand);color:#05140a;font-weight:900;border:0;cursor:pointer;text-decoration:none
-    }
-    .cta-btn.secondary{background:var(--brand-2);color:#04121e}
-    .cta-mini{font-size:12px;color:var(--muted);margin-top:6px}
-
-    /* Footer CTA bar */
-    .cta-bar{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(680px,92%);background:linear-gradient(180deg,#162030,#101620);border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:var(--shadow);padding:12px;display:flex;gap:10px;align-items:center;z-index:60}
-    .cta-bar .grow{flex:1}
-
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:36px 0 80px;color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero-grid{grid-template-columns:1fr}
-      h2{font-size:34px}
-      .card{grid-column:span 12}
-      .nav a.btn{display:none}
-      .cta-choices{grid-template-columns:1fr}
-    }
-  </style>
-  <script>
-    function tel(){window.location.href='tel:+17075550137'}
-    function email(){window.location.href='mailto:dom@coastalapex.com?subject=Mobile%20Mechanic%20Service%20Request'}
-    function scrollToId(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}
-  </script>
   <!-- Local Business Schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "AutomotiveBusiness",
-    "name": "Dom’s Mobile AutoWorks",
-    "url": "https://domsmobileautoworks.example",
-    "areaServed": ["Sonoma County"],
-    "telephone": "+1-707-555-0137",
-    "priceRange": "$$",
-    "image": "",
-    "description": "Mobile mechanic for oil changes, brake service, and spark plug replacement. Honest pricing. We come to you.",
-    "openingHours": "Mo-Su 08:00-19:00"
+    "@context":"https://schema.org",
+    "@type":"AutomotiveBusiness",
+    "name":"Dom's Mobile AutoWorks",
+    "url":"https://domsmobileautoworks.com",
+    "areaServed":["Sonoma County","Santa Rosa","Rohnert Park","Cotati","Petaluma","Windsor","Sebastopol"],
+    "telephone":"+1-707-555-0137",
+    "priceRange":"$$",
+    "description":"Mobile mechanic for oil changes, brake service, suspension, batteries, and more. Honest pricing — we come to you.",
+    "openingHours":"Mo-Su 07:00-19:00"
   }
   </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --black:   #0a0a0a;
+      --steel:   #111418;
+      --panel:   #161b21;
+      --rim:     #1e252e;
+      --line:    rgba(255,255,255,.07);
+      --line2:   rgba(255,255,255,.13);
+      --white:   #f0f2f5;
+      --muted:   #7a8a9b;
+      --lime:    #c8f135;   /* main brand accent – hi-vis yellow-green */
+      --lime-dk: #9dbf1c;
+      --orange:  #ff6b2b;   /* secondary accent */
+      --max:     1140px;
+      --r: 6px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--lime); text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== TEXTURE OVERLAY ===== */
+    body::before {
+      content:'';
+      position:fixed; inset:0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: .5;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .display { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -.5px; }
+    .label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; color: var(--muted); }
+
+    /* ===== NAV ===== */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(10,10,10,.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-icon {
+      width: 36px; height: 36px; border-radius: 4px;
+      background: var(--lime);
+      display: grid; place-items: center;
+    }
+    .nav-icon svg { width: 20px; height: 20px; }
+    .nav-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 18px; text-transform: uppercase;
+      letter-spacing: .5px; color: var(--white);
+    }
+    .nav-links { display: flex; align-items: center; gap: 6px; }
+    .nav-links a {
+      color: var(--muted); font-size: 14px; font-weight: 500;
+      padding: 6px 12px; border-radius: 4px; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 20px; border-radius: var(--r);
+      background: var(--lime); color: var(--black);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 15px; text-transform: uppercase;
+      letter-spacing: .5px; border: none; cursor: pointer;
+      transition: background .2s, transform .1s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: #d8ff50; }
+    .btn-primary:active { transform: scale(.97); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 20px; border-radius: var(--r);
+      background: transparent; color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 15px; text-transform: uppercase;
+      letter-spacing: .5px; border: 1px solid var(--line2); cursor: pointer;
+      transition: background .2s, border-color .2s;
+      white-space: nowrap;
+    }
+    .btn-ghost:hover { background: var(--rim); border-color: rgba(255,255,255,.25); }
+    .btn-orange {
+      background: var(--orange); color: #fff;
+    }
+    .btn-orange:hover { background: #ff8550; }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: 90px 0 80px;
+      background:
+        radial-gradient(ellipse 80% 60% at 65% -10%, rgba(200,241,53,.12), transparent),
+        radial-gradient(ellipse 60% 60% at 0% 80%, rgba(255,107,43,.08), transparent),
+        var(--black);
+    }
+    /* diagonal rule */
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -1px; left: 0; right: 0; height: 60px;
+      background: var(--steel);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    }
+    /* large ghosted text */
+    .hero-ghost {
+      position: absolute; top: -10px; right: -20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(120px, 18vw, 240px);
+      text-transform: uppercase; letter-spacing: -4px;
+      color: rgba(255,255,255,.025);
+      user-select: none; pointer-events: none; line-height: 1;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
+    }
+    .hero-eyebrow .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--lime);
+      box-shadow: 0 0 10px var(--lime);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .6; transform: scale(.85); }
+    }
+    .hero-eyebrow span { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--lime); }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(52px, 7vw, 88px);
+      text-transform: uppercase; line-height: .95;
+      letter-spacing: -1px; color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero h1 em { font-style: normal; color: var(--lime); }
+    .hero-sub {
+      font-size: 17px; color: var(--muted); max-width: 520px; margin-bottom: 32px; line-height: 1.7;
+    }
+    .hero-sub strong { color: var(--white); }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+    .hero-trust { display: flex; gap: 20px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; }
+    .trust-icon { color: var(--lime); font-size: 16px; }
+    .trust-item span { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+    /* hero card */
+    .hero-card {
+      background: var(--panel);
+      border: 1px solid var(--line2);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,.5);
+    }
+    .hero-card-header {
+      background: var(--lime);
+      padding: 14px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .hero-card-header .title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 17px; text-transform: uppercase;
+      color: var(--black); letter-spacing: .5px;
+    }
+    .hero-card-header .status {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 12px; text-transform: uppercase;
+      background: rgba(0,0,0,.2); color: var(--black);
+      padding: 4px 10px; border-radius: 3px; letter-spacing: 1px;
+    }
+    .hero-card-body { padding: 20px; }
+    .service-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .service-row:last-child { border-bottom: none; }
+    .service-row .sname { font-weight: 600; font-size: 15px; color: var(--white); }
+    .service-row .sdesc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .service-row .sprice {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 20px; color: var(--lime); white-space: nowrap;
+    }
+    .hero-card-footer {
+      background: var(--rim); padding: 14px 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-card-footer .info { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .hero-card-footer .info strong { color: var(--white); }
+
+    /* ===== MARQUEE STRIP ===== */
+    .marquee-strip {
+      background: var(--lime); overflow: hidden;
+      padding: 10px 0;
+      position: relative; z-index: 2;
+    }
+    .marquee-track {
+      display: flex; gap: 0; white-space: nowrap;
+      animation: marquee 28s linear infinite;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 14px; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--black);
+      padding: 0 24px;
+    }
+    .marquee-sep { opacity: .4; }
+
+    /* ===== SECTION HEADINGS ===== */
+    .section-wrap { padding: 80px 0; }
+    .section-eyebrow {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+    }
+    .section-eyebrow::before {
+      content:''; display:block; width:28px; height:3px;
+      background: var(--lime); border-radius: 2px;
+    }
+    .section-eyebrow span {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+      font-size: 12px; text-transform: uppercase; letter-spacing: 2px;
+      color: var(--lime);
+    }
+    .section-h {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(34px, 5vw, 52px);
+      text-transform: uppercase; line-height: 1; margin-bottom: 10px;
+    }
+    .section-sub { color: var(--muted); font-size: 16px; max-width: 560px; }
+
+    /* ===== SERVICES ===== */
+    #services { background: var(--steel); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+      margin-top: 40px; border: 2px solid var(--rim);
+      border-radius: 10px; overflow: hidden;
+    }
+    .svc-tile {
+      background: var(--panel); padding: 28px 26px;
+      border-right: 2px solid var(--rim);
+      border-bottom: 2px solid var(--rim);
+      position: relative; overflow: hidden;
+      transition: background .2s;
+    }
+    .svc-tile:hover { background: #1a2028; }
+    .svc-tile::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--lime); transform: scaleX(0); transform-origin: left;
+      transition: transform .3s ease;
+    }
+    .svc-tile:hover::before { transform: scaleX(1); }
+    .svc-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 52px; line-height: 1;
+      color: rgba(255,255,255,.04); position: absolute;
+      top: 12px; right: 16px; pointer-events: none; user-select: none;
+    }
+    .svc-icon { font-size: 28px; margin-bottom: 12px; }
+    .svc-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 22px; text-transform: uppercase;
+      line-height: 1.1; margin-bottom: 8px; color: var(--white);
+    }
+    .svc-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+    .svc-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 26px; color: var(--lime);
+    }
+    .svc-price sub { font-size: 13px; font-weight: 600; color: var(--muted); font-family: 'Barlow', sans-serif; }
+
+    /* ===== ESTIMATOR ===== */
+    #estimate { background: var(--black); }
+    .est-layout {
+      display: grid; grid-template-columns: 1fr 360px; gap: 24px; margin-top: 40px;
+    }
+    .est-panel {
+      background: var(--panel); border: 1px solid var(--line2);
+      border-radius: 10px; overflow: hidden;
+    }
+    .est-panel-header {
+      background: var(--rim); padding: 16px 22px;
+      border-bottom: 1px solid var(--line2);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .est-panel-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 16px; text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .est-panel-body { padding: 6px 0; }
+    .est-row {
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: center; gap: 12px;
+      padding: 13px 22px;
+      border-bottom: 1px solid var(--line);
+      transition: background .15s;
+    }
+    .est-row:last-child { border-bottom: none; }
+    .est-row:hover { background: rgba(255,255,255,.02); }
+    .est-row-left label {
+      display: flex; align-items: center; gap: 10px; cursor: pointer;
+    }
+    .est-cb {
+      width: 18px; height: 18px; border-radius: 3px;
+      border: 1.5px solid var(--line2); background: transparent;
+      appearance: none; -webkit-appearance: none; cursor: pointer;
+      flex-shrink: 0; position: relative; transition: background .15s, border-color .15s;
+    }
+    .est-cb:checked { background: var(--lime); border-color: var(--lime); }
+    .est-cb:checked::after {
+      content: ''; position: absolute; top: 2px; left: 5px;
+      width: 5px; height: 9px; border: 2px solid var(--black);
+      border-top: none; border-left: none; transform: rotate(45deg);
+    }
+    .est-row-left .ename { font-size: 15px; font-weight: 600; color: var(--white); }
+    .est-row-left .edesc { font-size: 12px; color: var(--muted); margin-top: 1px; padding-left: 28px; }
+    .est-row-right { display: flex; align-items: center; gap: 10px; }
+    .est-price-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 18px; color: var(--lime);
+      white-space: nowrap;
+    }
+    select.est-sel {
+      background: var(--rim); border: 1px solid var(--line2);
+      color: var(--white); font-size: 13px;
+      padding: 5px 8px; border-radius: 4px; cursor: pointer;
+    }
+    select.est-sel:disabled { opacity: .35; cursor: not-allowed; }
+
+    /* parts toggle */
+    .parts-row { padding: 16px 22px; background: var(--rim); border-top: 1px solid var(--line2); }
+    .parts-row .parts-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 10px; }
+    .parts-pills { display: flex; gap: 8px; }
+    .parts-pill { position: relative; }
+    .parts-pill input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .parts-pill span {
+      display: block; padding: 9px 16px; border-radius: 4px;
+      border: 1.5px solid var(--line2); background: transparent;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 14px; text-transform: uppercase;
+      letter-spacing: .5px; color: var(--muted); cursor: pointer;
+      transition: all .15s;
+    }
+    .parts-pill:hover span { border-color: rgba(255,255,255,.3); color: var(--white); }
+    .parts-pill input:checked + span { background: var(--lime); border-color: var(--lime); color: var(--black); }
+
+    /* total */
+    .est-total-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 22px; background: var(--black);
+      border-top: 2px solid var(--lime);
+    }
+    .est-total-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 12px; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--muted);
+    }
+    .est-total-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 36px; color: var(--lime);
+    }
+    .est-total-sub { font-size: 12px; color: var(--muted); }
+    .est-actions { padding: 16px 22px; display: flex; gap: 10px; }
+
+    /* summary card */
+    .est-summary {
+      background: var(--panel); border: 1px solid var(--line2);
+      border-radius: 10px; padding: 24px; display: flex;
+      flex-direction: column; gap: 20px;
+      position: sticky; top: 84px;
+    }
+    .est-summary .sum-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 22px; text-transform: uppercase;
+    }
+    .sum-line { display: flex; justify-content: space-between; font-size: 14px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+    .sum-line:last-child { border-bottom: none; }
+    .sum-line .sk { color: var(--muted); }
+    .sum-line .sv { font-weight: 600; }
+    .sum-empty { font-size: 13px; color: var(--muted); font-style: italic; }
+    #sum-note { font-size: 12px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line2); padding-top: 14px; }
+
+    /* ===== WHY US ===== */
+    #why { background: var(--steel); }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 40px; }
+    .why-tile {
+      background: var(--panel); padding: 28px 22px;
+      border: 1px solid var(--rim); border-radius: 4px;
+      position: relative; overflow: hidden;
+    }
+    .why-num {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+      font-size: 64px; color: rgba(200,241,53,.06);
+      position: absolute; top: -8px; right: 10px;
+      line-height: 1; pointer-events: none; user-select: none;
+    }
+    .why-icon { font-size: 30px; margin-bottom: 14px; }
+    .why-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 20px; text-transform: uppercase;
+      margin-bottom: 8px; color: var(--white);
+    }
+    .why-text { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    /* ===== REVIEWS ===== */
+    #reviews { background: var(--black); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+    .review-card {
+      background: var(--panel); border: 1px solid var(--line2);
+      border-radius: 10px; padding: 24px;
+      position: relative; overflow: hidden;
+    }
+    .review-card::before {
+      content: '"'; position: absolute; top: -10px; right: 14px;
+      font-size: 110px; line-height: 1; font-family: Georgia, serif;
+      color: rgba(200,241,53,.06); pointer-events: none;
+    }
+    .review-stars { color: var(--lime); font-size: 16px; letter-spacing: 2px; margin-bottom: 12px; }
+    .review-text { font-size: 15px; color: var(--white); line-height: 1.7; margin-bottom: 16px; }
+    .review-author { font-size: 13px; color: var(--muted); font-weight: 600; }
+    .review-author strong { color: var(--lime); }
+
+    /* ===== BOOK ===== */
+    #book { background: var(--steel); }
+    .book-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; margin-top: 40px; }
+    .book-choice {
+      background: var(--panel); border: 1px solid var(--line2);
+      border-radius: 10px; overflow: hidden;
+      transition: border-color .2s, transform .2s;
+    }
+    .book-choice:hover { border-color: var(--lime); transform: translateY(-3px); }
+    .book-choice-header {
+      padding: 20px 24px; border-bottom: 1px solid var(--line);
+    }
+    .book-choice-header.accent-lime { border-top: 3px solid var(--lime); }
+    .book-choice-header.accent-orange { border-top: 3px solid var(--orange); }
+    .book-choice-type {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 11px; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--muted); margin-bottom: 4px;
+    }
+    .book-choice-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 26px; text-transform: uppercase;
+      color: var(--white);
+    }
+    .book-choice-body { padding: 20px 24px; }
+    .book-choice-body p { font-size: 14px; color: var(--muted); margin-bottom: 18px; line-height: 1.65; }
+    .book-note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+    /* contact sidebar */
+    .book-contact {
+      background: var(--black); border: 1px solid var(--line2);
+      border-radius: 10px; padding: 28px; display: flex;
+      flex-direction: column; gap: 16px; justify-content: center;
+    }
+    .book-contact .bc-label {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+      font-size: 12px; text-transform: uppercase; letter-spacing: 2px;
+      color: var(--muted);
+    }
+    .book-contact .bc-h {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+      font-size: 32px; text-transform: uppercase; line-height: 1.1;
+      color: var(--white);
+    }
+    .bc-divider { height: 1px; background: var(--line2); }
+    .bc-row { display: flex; align-items: center; gap: 14px; }
+    .bc-icon {
+      width: 42px; height: 42px; border-radius: 6px;
+      background: var(--rim); display: grid; place-items: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .bc-text .bc-type { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); font-weight: 700; }
+    .bc-text .bc-val { font-size: 16px; font-weight: 700; color: var(--white); }
+    .bc-text .bc-val a { color: var(--white); }
+    .bc-text .bc-val a:hover { color: var(--lime); }
+
+    /* ===== FAQ ===== */
+    #faq { background: var(--black); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 40px; }
+    details.faq-item {
+      background: var(--panel); border: 1px solid var(--line2);
+      border-radius: 8px; overflow: hidden;
+      transition: border-color .2s;
+    }
+    details.faq-item[open] { border-color: rgba(200,241,53,.35); }
+    details.faq-item summary {
+      padding: 18px 20px; cursor: pointer;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 17px; text-transform: uppercase;
+      letter-spacing: .3px; list-style: none; color: var(--white);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+'; font-size: 22px; color: var(--lime);
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+      flex-shrink: 0; transition: transform .2s;
+    }
+    details.faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-ans { padding: 0 20px 18px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--steel); border-top: 1px solid var(--line);
+      padding: 50px 0 40px;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 32px; flex-wrap: wrap;
+    }
+    .footer-brand .fn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 22px; text-transform: uppercase;
+      color: var(--white); margin-bottom: 6px;
+    }
+    .footer-brand .ft { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 300px; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .footer-links a { font-size: 13px; color: var(--muted); transition: color .2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 12px; color: var(--muted); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+
+    /* ===== STICKY CTA BAR ===== */
+    .cta-bar {
+      position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+      width: min(640px, 92%);
+      background: rgba(22,27,33,.95);
+      border: 1px solid var(--line2);
+      backdrop-filter: blur(16px);
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.6);
+      padding: 12px 14px;
+      display: flex; align-items: center; gap: 12px;
+      z-index: 200;
+    }
+    .cta-bar .cb-text { flex: 1; }
+    .cta-bar .cbt { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; text-transform: uppercase; }
+    .cta-bar .cbs { font-size: 12px; color: var(--muted); }
+    .cta-bar .cta-bar-btns { display: flex; gap: 8px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .est-layout { grid-template-columns: 1fr; }
+      .est-summary { position: static; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .book-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-ghost { display: none; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .cta-bar .cta-bar-btns { flex-direction: column; gap: 6px; }
+      .cta-bar { flex-wrap: wrap; }
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <!-- Wrench icon -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="#06130b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 1 6 6l-6.9 6.9a3 3 0 0 1-4.2 0l-2.5-2.5a3 3 0 0 1 0-4.2L14.7 6.3z"/><path d="M13 7l4 4"/></svg>
-        </div>
-        <h1>Dom’s Mobile AutoWorks</h1>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <div class="nav-logo">
+      <div class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 6.3a4.5 4.5 0 0 1 6 6l-6.9 6.9a3 3 0 0 1-4.2 0l-2.5-2.5a3 3 0 0 1 0-4.2z"/>
+          <path d="M13 7l4 4"/>
+        </svg>
       </div>
-      <a class="btn" href="#book" onclick="scrollToId('book')">Book a Visit</a>
+      <span class="nav-name">Dom's Mobile AutoWorks</span>
     </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h2>Honest <span style="color:var(--brand)">Mobile Mechanic</span> that comes to you.</h2>
-          <p class="sub">Oil changes, brake service, and spark plug replacements—done in your driveway. <strong>Serving Sonoma County.</strong></p>
-          <div class="cred">
-            <span class="chip">Insured • On-site Service</span>
-            <span class="chip">Up-front Pricing</span>
-            <span class="chip">Same-Week Appointments</span>
-          </div>
-          <div class="cta">
-            <button class="btn" onclick="tel()">📞 Call (707) 555-0137</button>
-            <button class="btn secondary" onclick="email()">✉️ Email dom@coastalapex.com</button>
-          </div>
-        </div>
-        <div class="hero-card">
-          <strong>What we do best</strong>
-          <ul>
-            <li>Full-synthetic oil & OEM-spec filter changes</li>
-            <li>Brake pads & rotors per axle (torque to spec & bedding)</li>
-            <li>Spark plugs (set install, gap check, proper torque)</li>
-            <li>Basic maintenance: air filters, batteries, bulbs</li>
-          </ul>
-          <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
-            <span class="badge">No shop upsells</span>
-            <span class="badge" style="background:rgba(42,163,255,.15);border-color:rgba(42,163,255,.35);color:#d7ecff">We come to you</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <div class="container">
-        <h3 class="section-title">Simple, clear services</h3>
-        <p class="muted" style="margin-top:-6px">Transparent estimates before we arrive. Parts at our cost + a fair mobile labor rate.</p>
-        <div class="grid services">
-          <article class="card">
-            <h3>Oil Change (Full-Synthetic)</h3>
-            <p class="muted">Includes OEM-spec filter, drain plug washer, fluids top-off, and multi-point check.</p>
-            <p class="price">From $89 + parts</p>
-          </article>
-          <article class="card">
-            <h3>Brake Pads & Rotors</h3>
-            <p class="muted">OE-equivalent parts. Torque to spec + pad bedding included.</p>
-            <p class="price">From $59/axle + parts</p>
-          </article>
-          <article class="card">
-            <h3>Spark Plugs</h3>
-            <p class="muted">Correct plug type, gap check, coil boots inspected, no seized threads.</p>
-            <p class="price">From $99 + parts</p>
-          </article>
-          <article class="card">
-            <h3>General Maintenance</h3>
-            <p class="muted">Air filters, battery swaps, wiper blades, bulbs, cabin filters, and more.</p>
-            <p class="price">From $79 + parts</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ESTIMATOR + GALLERY -->
-    <section id="estimate">
-      <div class="container">
-        <h3 class="section-title">Quick price estimator</h3>
-        <p class="muted" style="margin-top:-6px">Labor-only estimate. Parts are additional (at cost if we source). Final quote confirmed by text after booking.</p>
-
-        <div class="est-wrap">
-          <!-- Estimator Card -->
-          <div class="est-card">
-            <div class="est-grid">
-              <label for="est-oil">Oil Change + Filter</label>
-              <div class="qty">
-                <input id="est-oil" type="checkbox" onchange="calc()">
-                <span class="muted" style="font-size:13px">from $89</span>
-              </div>
-
-              <label for="est-pads">Brake Pads</label>
-              <div class="qty">
-                <input id="est-pads" type="checkbox" onchange="enable('axlesPads', this.checked); calc()">
-                <select id="axlesPads" disabled onchange="calc()">
-                  <option value="1">1 axle</option>
-                  <option value="2">2 axles</option>
-                </select>
-                <span class="muted" style="font-size:13px"> $59/axle</span>
-              </div>
-
-              <label for="est-rotors">Brake Rotors / Drums</label>
-              <div class="qty">
-                <input id="est-rotors" type="checkbox" onchange="enable('axlesRotors', this.checked); calc()">
-                <select id="axlesRotors" disabled onchange="calc()">
-                  <option value="1">1 axle</option>
-                  <option value="2">2 axles</option>
-                </select>
-                <span class="muted" style="font-size:13px"> $99/axle</span>
-              </div>
-
-              <label for="est-air">Engine Air Filter</label>
-              <div class="qty">
-                <input id="est-air" type="checkbox" onchange="calc()">
-                <span class="muted" style="font-size:13px"> from $25</span>
-              </div>
-
-              <label for="est-batt">Battery</label>
-              <div class="qty">
-                <input id="est-batt" type="checkbox" onchange="calc()">
-                <span class="muted" style="font-size:13px"> from $49</span>
-              </div>
-
-              <label for="est-plugs">Spark Plugs (set of 4)</label>
-              <div class="qty">
-                <input id="est-plugs" type="checkbox" onchange="calc()">
-                <span class="muted" style="font-size:13px"> from $74</span>
-              </div>
-            </div>
-
-            <div class="est-line">
-              <div>
-                <strong>Parts plan</strong>
-                <div class="pill-group" role="radiogroup" aria-label="Parts plan">
-                  <label class="radio-pill">
-                    <input type="radio" name="parts" value="provide" checked onchange="calc()">
-                    <span>I’ll provide parts</span>
-                  </label>
-                  <label class="radio-pill alt">
-                    <input type="radio" name="parts" value="source" onchange="calc()">
-                    <span>We provide parts</span>
-                  </label>
-                </div>
-              </div>
-              <div class="note" id="parts-note"></div>
-            </div>
-
-            <div class="est-total">
-              <span>Estimated labor total</span>
-              <span id="est-total">$0</span>
-            </div>
-            <p class="note">+ parts (if we source, you pay our cost, no markup). Major vehicles (performance, Euro, seized hardware) may require custom quote.</p>
-            <div style="display:flex;gap:10px;margin-top:10px">
-              <button class="btn" onclick="goBook()">Book &amp; confirm</button>
-              <button class="btn secondary" onclick="resetEst()">Clear</button>
-            </div>
-          </div>
-
-          <!-- Gallery Card -->
-          <div class="est-card">
-            <h3 style="margin-top:0">Recent jobs</h3>
-            <div class="gallery">
-              <div class="photo-spot">
-                <div>
-                  📸 <br><strong>Photo spot</strong><br>
-                  <small>Replace with your image (e.g., `photos/job1.jpg`).</small>
-                </div>
-              </div>
-              <div class="photo-spot">
-                <div>
-                  🔧 <br><strong>Before/after</strong><br>
-                  <small>Brakes, oil service, or a clean engine bay.</small>
-                </div>
-              </div>
-            </div>
-            <p class="note" style="margin-top:10px"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews">
-      <div class="container">
-        <h3 class="section-title">What neighbors are saying</h3>
-        <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:16px">
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Booked for a brake job and he came to my driveway after work. No upsells, just clean work. Car stops like new.”</p>
-            <small class="muted">— Melissa R., Santa Rosa</small>
-          </div>
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“On time, professional, and affordable. Oil change + inspection in under an hour. Will use again.”</p>
-            <small class="muted">— Javier T., Rohnert Park</small>
-          </div>
-          <div class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Spark plugs done right with torque and gap checked. Runs smoother than it has in years.”</p>
-            <small class="muted">— Priya S., Novato</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <h3 class="section-title">Common questions</h3>
-        <div class="grid" style="grid-template-columns:1fr 1fr;gap:16px">
-          <details>
-            <summary>How do parts & pricing work?</summary>
-            <p class="muted">We source quality parts at retail and pass them through at cost. You’ll see parts + labor clearly on your estimate before we arrive. If you prefer, we’ll install parts you already purchased (as long as they meet spec).</p>
-          </details>
-          <details>
-            <summary>Where do you travel?</summary>
-            <p class="muted">Sonoma County, including Santa Rosa, Rohnert Park, Cotati, Sebastopol, Petaluma, and Windsor. Farther? Ask and we’ll try to accommodate.</p>
-          </details>
-          <details>
-            <summary>Do you work at apartments?</summary>
-            <p class="muted">Yes—provided your property allows on-site maintenance and there’s enough space to work safely.</p>
-          </details>
-          <details>
-            <summary>Payment options</summary>
-            <p class="muted">Card, Apple Pay, or cash. Invoices provided for every job.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- BOOKING (CTA) -->
-    <section id="book">
-      <div class="container">
-        <div class="cta-shell">
-          <div class="header">
-            <h3 class="section-title" style="margin:0">Book now</h3>
-            <span class="cta-badge">Same-week openings</span>
-          </div>
-          <p class="muted" style="margin-top:-4px">Choose how you’d like to handle parts. You’ll pick a time on the next screen.</p>
-          <div class="cta-choices">
-            <div class="cta-card">
-              <h3 style="margin:0 0 6px">I’ll provide parts</h3>
-              <p class="muted" style="margin:0 0 8px">Have your own parts ready on-site. We’ll handle the rest.</p>
-              <div class="cta-buttons">
-                <a class="cta-btn" href="https://calendly.com/blaxorus-blaxorus/you-provide-parts" target="_blank" rel="noopener">Book — You provide parts</a>
-              </div>
-              <div class="cta-mini">Tip: include your year/make/model when booking.</div>
-            </div>
-            <div class="cta-card">
-              <h3 style="margin:0 0 6px">We provide parts</h3>
-              <p class="muted" style="margin:0 0 8px">We’ll source quality parts at our cost. Zero markup.</p>
-              <div class="cta-buttons">
-                <a class="cta-btn secondary" href="https://calendly.com/blaxorus-blaxorus/we-provide-parts" target="_blank" rel="noopener">Book — We provide parts</a>
-              </div>
-              <div class="cta-mini">Please book <strong>≥ 4 days</strong> in advance so we can source the right components.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="cta-bar">
-    <div class="grow"><strong>Need a quick oil change or brakes?</strong><br/><span class="muted">Same-week openings available.</span></div>
-    <button class="btn" onclick="tel()">Call</button>
-    <button class="btn secondary" onclick="scrollToId('book')">Get Estimate</button>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#estimate">Estimate</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn-primary" href="#book">Book a Visit</a>
+    </div>
   </div>
+</nav>
 
-  <footer>
-    <div class="container">
-      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <div>
-          <div class="brand" style="margin-bottom:8px">
-            <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#06130b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 1 6 6l-6.9 6.9a3 3 0 0 1-4.2 0l-2.5-2.5a3 3 0 0 1 0-4.2L14.7 6.3z"/><path d="M13 7l4 4"/></svg></div>
-            <strong>Dom’s Mobile AutoWorks</strong>
-          </div>
-          <small class="muted">© <span id="yr"></span> Dom’s Mobile AutoWorks. All rights reserved.</small>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ghost" aria-hidden="true">WRENCH</div>
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow">
+        <div class="dot"></div>
+        <span>Sonoma County's Mobile Mechanic</span>
+      </div>
+      <h1>
+        We come<br>
+        to <em>your</em><br>
+        driveway.
+      </h1>
+      <p class="hero-sub">
+        Oil changes, brakes, suspension, batteries, spark plugs, and more—done on-site.
+        <strong>No shop. No upsells. No bull.</strong>
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="tel:+17075550137">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (707) 555-0137
+        </a>
+        <a class="btn-ghost" href="#estimate">Get a Quick Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="trust-icon">✓</span><span>Insured &amp; on-site</span></div>
+        <div class="trust-item"><span class="trust-icon">✓</span><span>Up-front pricing</span></div>
+        <div class="trust-item"><span class="trust-icon">✓</span><span>Same-week bookings</span></div>
+        <div class="trust-item"><span class="trust-icon">✓</span><span>Zero hidden fees</span></div>
+      </div>
+    </div>
+
+    <!-- pricing card -->
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <span class="title">Today's Rates — Labor</span>
+        <span class="status">Parts Extra</span>
+      </div>
+      <div class="hero-card-body">
+        <div class="service-row">
+          <div><div class="sname">Oil Change (Full-Synthetic)</div><div class="sdesc">Filter, drain washer, fluids top-off</div></div>
+          <div class="sprice">$89+</div>
         </div>
-        <div>
-          <small class="muted">Not affiliated with or endorsed by any OEM. All trademarks belong to their owners.</small>
+        <div class="service-row">
+          <div><div class="sname">Brake Pads &amp; Rotors</div><div class="sdesc">Per axle, torqued to spec, bedded</div></div>
+          <div class="sprice">$69+</div>
+        </div>
+        <div class="service-row">
+          <div><div class="sname">Suspension Components</div><div class="sdesc">Struts, shocks, control arms, links</div></div>
+          <div class="sprice">$89+</div>
+        </div>
+        <div class="service-row">
+          <div><div class="sname">Spark Plugs</div><div class="sdesc">Full set, gap-checked, torqued</div></div>
+          <div class="sprice">$99+</div>
+        </div>
+        <div class="service-row">
+          <div><div class="sname">Battery</div><div class="sdesc">Test, swap, terminal clean</div></div>
+          <div class="sprice">$59+</div>
+        </div>
+      </div>
+      <div class="hero-card-footer">
+        <div class="info"><strong>Parts at our cost.</strong> Zero markup. Bring your own or we source them for you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Oil Changes <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Brake Service <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Suspension Work <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Battery Replacement <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Spark Plugs <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Air Filters <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Fluid Services <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">We Come To You <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Santa Rosa &amp; Sonoma County <span class="marquee-sep">✦</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Oil Changes <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Brake Service <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Suspension Work <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Battery Replacement <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Spark Plugs <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Air Filters <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Fluid Services <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">We Come To You <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Santa Rosa &amp; Sonoma County <span class="marquee-sep">✦</span></span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section-wrap" id="services">
+  <div class="container">
+    <div class="section-eyebrow"><span>What We Do</span></div>
+    <h2 class="section-h">Simple, Honest Services</h2>
+    <p class="section-sub">Transparent labor quotes before we arrive. Parts at our cost — no markup, ever.</p>
+
+    <div class="services-grid">
+      <div class="svc-tile reveal">
+        <div class="svc-num">01</div>
+        <div class="svc-icon">🛢️</div>
+        <div class="svc-name">Oil Change</div>
+        <div class="svc-desc">Full-synthetic, OEM-spec filter, drain plug washer, fluids top-off, and a complimentary multi-point visual check.</div>
+        <div class="svc-price">$89 <sub>labor + parts</sub></div>
+      </div>
+      <div class="svc-tile reveal reveal-delay-1">
+        <div class="svc-num">02</div>
+        <div class="svc-icon">🔴</div>
+        <div class="svc-name">Brakes</div>
+        <div class="svc-desc">Pads, rotors, or both. OE-equivalent parts, torqued to spec, rotor bedded. Caliper slide pins serviced.</div>
+        <div class="svc-price">$69 <sub>/ axle labor</sub></div>
+      </div>
+      <div class="svc-tile reveal reveal-delay-2">
+        <div class="svc-num">03</div>
+        <div class="svc-icon">🔩</div>
+        <div class="svc-name">Suspension</div>
+        <div class="svc-desc">Struts, shocks, sway bar links, control arm bushings, ball joints — quoted per job after review of make/model.</div>
+        <div class="svc-price">$89+ <sub>labor</sub></div>
+      </div>
+      <div class="svc-tile reveal">
+        <div class="svc-num">04</div>
+        <div class="svc-icon">⚡</div>
+        <div class="svc-name">Battery</div>
+        <div class="svc-desc">Load test, swap, terminal clean and protect. Quick reset of window/radio memory where applicable.</div>
+        <div class="svc-price">$59 <sub>labor + parts</sub></div>
+      </div>
+      <div class="svc-tile reveal reveal-delay-1">
+        <div class="svc-num">05</div>
+        <div class="svc-icon">🔥</div>
+        <div class="svc-name">Spark Plugs</div>
+        <div class="svc-desc">Correct plug, gap-checked, coil boots inspected, anti-seize applied. Torqued precisely — no rounded threads.</div>
+        <div class="svc-price">$99 <sub>set of 4 labor</sub></div>
+      </div>
+      <div class="svc-tile reveal reveal-delay-2">
+        <div class="svc-num">06</div>
+        <div class="svc-icon">🔧</div>
+        <div class="svc-name">General Maintenance</div>
+        <div class="svc-desc">Air &amp; cabin filters, wipers, bulbs, coolant flush, brake fluid flush, and more. Ask for a quote.</div>
+        <div class="svc-price">$65+ <sub>labor</sub></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATOR -->
+<section class="section-wrap" id="estimate">
+  <div class="container">
+    <div class="section-eyebrow"><span>Pricing Tool</span></div>
+    <h2 class="section-h">Build Your Estimate</h2>
+    <p class="section-sub">Labor-only figures. Parts are additional — at our cost if we source them, no markup.</p>
+
+    <div class="est-layout">
+      <!-- Main estimator -->
+      <div>
+        <div class="est-panel">
+          <div class="est-panel-header">
+            <span class="est-panel-title">Select Services</span>
+            <span style="font-size:12px; color:var(--muted)">+ parts additional</span>
+          </div>
+          <div class="est-panel-body">
+
+            <div class="est-row">
+              <div class="est-row-left">
+                <label for="c-oil"><input class="est-cb" type="checkbox" id="c-oil" onchange="calc()"><span class="ename">Oil Change — Full Synthetic</span></label>
+                <div class="edesc">OEM-spec filter, drain plug washer, fluids top-off</div>
+              </div>
+              <div class="est-row-right"><span class="est-price-tag">$89</span></div>
+            </div>
+
+            <div class="est-row">
+              <div class="est-row-left">
+                <label for="c-pads"><input class="est-cb" type="checkbox" id="c-pads" onchange="enableSel('sel-pads', this.checked); calc()"><span class="ename">Brake Pads</span></label>
+                <div class="edesc">Torqued to spec, caliper slides serviced</div>
+              </div>
+              <div class="est-row-right">
+                <select id="sel-pads" class="est-sel" disabled onchange="calc()">
+                  <option value="1">1 axle</option>
+                  <option value="2">2 axles</option>
+                </select>
+                <span class="est-price-tag">$69<span style="font-size:13px; font-weight:600; color:var(--muted)">/axle</span></span>
+              </div>
+            </div>
+
+            <div class="est-row">
+              <div class="est-row-left">
+                <label for="c-rotors"><input class="est-cb" type="checkbox" id="c-rotors" onchange="enableSel('sel-rotors', this.checked); calc()"><span class="ename">Brake Rotors / Drums</span></label>
+                <div class="edesc">Pad bedding included</div>
+              </div>
+              <div class="est-row-right">
+                <select id="sel-rotors" class="est-sel" disabled onchange="calc()">
+                  <option value="1">1 axle</option>
+                  <option value="2">2 axles</option>
+                </select>
+                <span class="est-price-tag">$79<span style="font-size:13px; font-weight:600; color:var(--muted)">/axle</span></span>
+              </div>
+            </div>
+
+            <div class="est-row">
+              <div class="est-row-left">
+                <label for="c-plugs"><input class="est-cb" type="checkbox" id="c-plugs" onchange="calc()"><span class="ename">Spark Plugs — Set of 4</span></label>
+                <div class="edesc">Gap-checked, torqued, coil boots inspected</div>
+              </div>
+              <div class="est-row-right"><span class="est-price-tag">$99</span></div>
+            </div>
+
+            <div class="est-row">
+              <div class="est-row-left">
+                <label for="c-batt"><input class="est-cb" type="checkbox" id="c-batt" onchange="calc()"><span class="ename">Battery Swap</span></label>
+                <div class="edesc">Load test + install + terminal treatment</div>
+              </div>
+              <div class="est-row-right"><span class="est-price-tag">$59</span></div>
+            </div>
+
+            <div class="est-row">
+              <div class="est-row-left">
+                <label for="c-air"><input class="est-cb" type="checkbox" id="c-air" onchange="calc()"><span class="ename">Engine Air Filter</span></label>
+                <div class="edesc">Inspection + install</div>
+              </div>
+              <div class="est-row-right"><span class="est-price-tag">$29</span></div>
+            </div>
+
+            <div class="est-row">
+              <div class="est-row-left">
+                <label for="c-susp"><input class="est-cb" type="checkbox" id="c-susp" onchange="calc()"><span class="ename">Suspension (basic job)</span></label>
+                <div class="edesc">Links, bushings, or single component. Complex jobs quoted separately.</div>
+              </div>
+              <div class="est-row-right"><span class="est-price-tag">$89+</span></div>
+            </div>
+
+          </div>
+
+          <div class="parts-row">
+            <div class="parts-label">Parts plan</div>
+            <div class="parts-pills">
+              <label class="parts-pill"><input type="radio" name="parts" value="provide" checked onchange="calc()"><span>I'll provide parts</span></label>
+              <label class="parts-pill"><input type="radio" name="parts" value="source" onchange="calc()"><span>You source parts</span></label>
+            </div>
+          </div>
+
+          <div class="est-total-row">
+            <div>
+              <div class="est-total-label">Labor Estimate</div>
+              <div class="est-total-sub" id="est-parts-note">Select services above</div>
+            </div>
+            <div class="est-total-value" id="est-total">$0</div>
+          </div>
+
+          <div class="est-actions">
+            <a class="btn-primary" id="est-book-btn" href="https://calendly.com/blaxorus-blaxorus/you-provide-parts" target="_blank" rel="noopener">Book &amp; Confirm</a>
+            <button class="btn-ghost" onclick="resetEst()">Clear</button>
+          </div>
+        </div>
+        <p style="font-size:12px; color:var(--muted); margin-top:10px; padding:0 4px;">Performance, European, or heavily-rusted vehicles may require a custom quote. Final price confirmed by text/call after booking.</p>
+      </div>
+
+      <!-- Summary sidebar -->
+      <div class="est-summary" id="est-summary">
+        <div class="sum-title">Your Summary</div>
+        <div id="sum-lines"><div class="sum-empty">No services selected yet.</div></div>
+        <div id="sum-note" style="font-size:12px; color:var(--muted); display:none;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section-wrap" id="why">
+  <div class="container">
+    <div class="section-eyebrow"><span>Why Dom's</span></div>
+    <h2 class="section-h">Built Different</h2>
+    <div class="why-grid">
+      <div class="why-tile reveal">
+        <div class="why-num">1</div>
+        <div class="why-icon">🏠</div>
+        <div class="why-title">We Come To You</div>
+        <div class="why-text">Your driveway, your workplace, your apartment lot. No towing, no waiting rooms, no dropped-off headache.</div>
+      </div>
+      <div class="why-tile reveal reveal-delay-1">
+        <div class="why-num">2</div>
+        <div class="why-icon">💬</div>
+        <div class="why-title">Zero Upsells</div>
+        <div class="why-text">We do what you booked. No "while we were in there" add-ons. If we spot something, we tell you — you decide.</div>
+      </div>
+      <div class="why-tile reveal reveal-delay-2">
+        <div class="why-num">3</div>
+        <div class="why-icon">🔩</div>
+        <div class="why-title">Real Experience</div>
+        <div class="why-text">Dom turns his own wrenches — daily. Brakes, suspension, swaps, fluids. This isn't a franchise gig, it's hands-on know-how.</div>
+      </div>
+      <div class="why-tile reveal reveal-delay-3">
+        <div class="why-num">4</div>
+        <div class="why-icon">💰</div>
+        <div class="why-title">Parts at Cost</div>
+        <div class="why-text">If we source your parts, you pay what we pay. No markup. Bring your own OEM-spec parts and we'll install those too.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section-wrap" id="reviews">
+  <div class="container">
+    <div class="section-eyebrow"><span>Customer Reviews</span></div>
+    <h2 class="section-h">What Neighbors Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Came to my driveway after work and knocked out a full brake job in under an hour. No upsells, no drama — car stops like new. Booking again for the oil change."</p>
+        <div class="review-author">— <strong>Melissa R.</strong>, Santa Rosa</div>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"On time, professional, and cheaper than the shop quote I got. Oil change + inspection done clean. He actually explained what he was doing, which I appreciated."</p>
+        <div class="review-author">— <strong>Javier T.</strong>, Rohnert Park</div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Spark plugs done right — gap checked, torqued properly, no cross-threading. Engine runs smoother than it has in years. Dude clearly knows what he's doing."</p>
+        <div class="review-author">— <strong>Priya S.</strong>, Novato</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="section-wrap" id="book">
+  <div class="container">
+    <div class="section-eyebrow"><span>Get On The Schedule</span></div>
+    <h2 class="section-h">Book a Visit</h2>
+    <p class="section-sub">Same-week openings available. Pick a time slot and we'll confirm by text.</p>
+
+    <div class="book-grid">
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div class="book-choice">
+          <div class="book-choice-header accent-lime">
+            <div class="book-choice-type">Option A</div>
+            <div class="book-choice-name">You Provide Parts</div>
+          </div>
+          <div class="book-choice-body">
+            <p>Have your own parts on-site and we'll handle the labor. OEM-spec or better, please — we'll verify before we start.</p>
+            <a class="btn-primary" href="https://calendly.com/blaxorus-blaxorus/you-provide-parts" target="_blank" rel="noopener">
+              Schedule Now — You Provide Parts
+            </a>
+            <div class="book-note">Tip: Include your year/make/model in the notes when booking.</div>
+          </div>
+        </div>
+        <div class="book-choice">
+          <div class="book-choice-header accent-orange">
+            <div class="book-choice-type">Option B</div>
+            <div class="book-choice-name">We Source Parts</div>
+          </div>
+          <div class="book-choice-body">
+            <p>We'll source quality parts at our cost — no markup. Book at least 4 days out so we can order the right components for your vehicle.</p>
+            <a class="btn-primary btn-orange" href="https://calendly.com/blaxorus-blaxorus/we-provide-parts" target="_blank" rel="noopener">
+              Schedule Now — We Source Parts
+            </a>
+            <div class="book-note">Please book <strong>4+ days ahead</strong> for parts sourcing.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-contact">
+        <div class="bc-label">Prefer to reach out directly?</div>
+        <div class="bc-h">Let's Talk</div>
+        <div class="bc-divider"></div>
+        <div class="bc-row">
+          <div class="bc-icon">📞</div>
+          <div class="bc-text">
+            <div class="bc-type">Call or Text</div>
+            <div class="bc-val"><a href="tel:+17075550137">(707) 555-0137</a></div>
+          </div>
+        </div>
+        <div class="bc-row">
+          <div class="bc-icon">✉️</div>
+          <div class="bc-text">
+            <div class="bc-type">Email</div>
+            <div class="bc-val"><a href="mailto:dom@coastalapex.com">dom@coastalapex.com</a></div>
+          </div>
+        </div>
+        <div class="bc-row">
+          <div class="bc-icon">📍</div>
+          <div class="bc-text">
+            <div class="bc-type">Service Area</div>
+            <div class="bc-val" style="font-size:14px;">Santa Rosa, Rohnert Park, Cotati, Petaluma, Windsor, Sebastopol &amp; surrounding Sonoma County</div>
+          </div>
+        </div>
+        <div class="bc-row">
+          <div class="bc-icon">🕐</div>
+          <div class="bc-text">
+            <div class="bc-type">Hours</div>
+            <div class="bc-val" style="font-size:14px;">Mon–Sun, 7 AM – 7 PM</div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
+<!-- FAQ -->
+<section class="section-wrap" id="faq">
+  <div class="container">
+    <div class="section-eyebrow"><span>FAQ</span></div>
+    <h2 class="section-h">Common Questions</h2>
+    <div class="faq-grid">
+      <details class="faq-item">
+        <summary>How does parts pricing work?</summary>
+        <div class="faq-ans">If we source your parts, you pay exactly what we pay — no markup. You'll see a parts estimate alongside the labor quote before we show up. Prefer to supply your own OEM or OEM-spec parts? Totally fine — we'll install them.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What areas do you cover?</summary>
+        <div class="faq-ans">We cover Sonoma County including Santa Rosa, Rohnert Park, Cotati, Sebastopol, Petaluma, Windsor, and Novato. Further out? Message us — we'll do our best to accommodate.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work at apartments?</summary>
+        <div class="faq-ans">Yes, as long as the property permits on-site maintenance and there's enough flat space to work safely. Most surface lots and driveways work just fine.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What payment methods do you accept?</summary>
+        <div class="faq-ans">Card, Apple Pay, Venmo, Zelle, or cash — your choice. A text invoice is provided for every job. No payment surprises.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can you work on any vehicle?</summary>
+        <div class="faq-ans">Most domestic and Japanese makes are no problem. European vehicles and modified or performance builds may need a custom quote first. When in doubt, just ask and we'll let you know upfront.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How long does a typical job take?</summary>
+        <div class="faq-ans">An oil change runs 30–45 minutes. Brakes per axle usually take 45–75 minutes. Spark plugs 30–60 minutes depending on the engine layout. We'll give you a time window when you book.</div>
+      </details>
+    </div>
+  </div>
+</section>
 
-    // helpers
-    function enable(id, on){ const el = document.getElementById(id); if(!el) return; el.disabled = !on; if(!on) el.value = '1'; }
-    function money(n){ return `$${n.toFixed(0)}` }
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="fn">Dom's Mobile AutoWorks</div>
+        <div class="ft">Honest, on-site auto service for Sonoma County. No shop overhead, no upsells — just clean work done right.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#estimate">Estimate</a>
+        <a href="#book">Book</a>
+        <a href="#faq">FAQ</a>
+        <a href="tel:+17075550137">(707) 555-0137</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © <span id="yr"></span> Dom's Mobile AutoWorks · Santa Rosa, CA · Not affiliated with any OEM. All trademarks belong to their respective owners.
+    </div>
+  </div>
+</footer>
 
-    // price table (labor only)
-    const P = {
-      oil: 89,
-      padsPerAxle: 59,
-      rotorsPerAxle: 99,
-      air: 25,
-      batt: 49,
-      plugs: 74 // set of 4, larger engines quoted after VIN
-    };
+<!-- STICKY CTA BAR -->
+<div class="cta-bar" id="ctaBar">
+  <div class="cb-text">
+    <div class="cbt">Need a quick oil change or brakes?</div>
+    <div class="cbs">Same-week openings · We come to you · Sonoma County</div>
+  </div>
+  <div class="cta-bar-btns">
+    <a class="btn-primary" href="tel:+17075550137">Call Now</a>
+    <a class="btn-ghost" href="#book">Book Online</a>
+  </div>
+</div>
 
-    function calc(){
-      let total = 0;
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-      if(document.getElementById('est-oil')?.checked) total += P.oil;
+  // --- ESTIMATOR ---
+  const PRICES = { oil:89, padsAxle:69, rotorsAxle:79, plugs:99, batt:59, air:29, susp:89 };
 
-      if(document.getElementById('est-pads')?.checked){
-        const ax = parseInt(document.getElementById('axlesPads').value,10) || 1;
-        total += P.padsPerAxle * ax;
-      }
+  function enableSel(id, on) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.disabled = !on;
+    if (!on) el.value = '1';
+  }
 
-      if(document.getElementById('est-rotors')?.checked){
-        const axR = parseInt(document.getElementById('axlesRotors').value,10) || 1;
-        total += P.rotorsPerAxle * axR;
-      }
+  function money(n){ return '$' + n; }
 
-      if(document.getElementById('est-air')?.checked) total += P.air;
-      if(document.getElementById('est-batt')?.checked) total += P.batt;
-      if(document.getElementById('est-plugs')?.checked) total += P.plugs;
+  function calc() {
+    let total = 0;
+    const lines = [];
 
-      document.getElementById('est-total').textContent = money(total);
-
-      const partsPlan = [...document.querySelectorAll('input[name="parts"]')].find(r => r.checked)?.value;
-      const note = partsPlan === 'source'
-        ? 'We’ll source quality parts at our cost. Please book ≥ 4 days ahead.'
-        : 'Great—please have parts on-site at your appointment.';
-      const pn = document.getElementById('parts-note'); if(pn) pn.textContent = note;
+    if (document.getElementById('c-oil')?.checked) {
+      total += PRICES.oil; lines.push({n:'Oil Change', v: money(PRICES.oil)});
+    }
+    if (document.getElementById('c-pads')?.checked) {
+      const ax = parseInt(document.getElementById('sel-pads').value)||1;
+      const sub = PRICES.padsAxle * ax;
+      total += sub; lines.push({n:`Brake Pads (${ax} axle${ax>1?'s':''})`, v: money(sub)});
+    }
+    if (document.getElementById('c-rotors')?.checked) {
+      const ax = parseInt(document.getElementById('sel-rotors').value)||1;
+      const sub = PRICES.rotorsAxle * ax;
+      total += sub; lines.push({n:`Rotors (${ax} axle${ax>1?'s':''})`, v: money(sub)});
+    }
+    if (document.getElementById('c-plugs')?.checked) {
+      total += PRICES.plugs; lines.push({n:'Spark Plugs (set 4)', v: money(PRICES.plugs)});
+    }
+    if (document.getElementById('c-batt')?.checked) {
+      total += PRICES.batt; lines.push({n:'Battery Swap', v: money(PRICES.batt)});
+    }
+    if (document.getElementById('c-air')?.checked) {
+      total += PRICES.air; lines.push({n:'Air Filter', v: money(PRICES.air)});
+    }
+    if (document.getElementById('c-susp')?.checked) {
+      total += PRICES.susp; lines.push({n:'Suspension (basic)', v: money(PRICES.susp)+'+'});
     }
 
-    function resetEst(){
-      ['est-oil','est-pads','est-rotors','est-air','est-batt','est-plugs'].forEach(id=>{
-        const el = document.getElementById(id); if(el) el.checked = false;
-      });
-      enable('axlesPads', false); enable('axlesRotors', false);
-      calc();
-    }
+    // update total
+    document.getElementById('est-total').textContent = money(total);
 
-    function selectedPartsPlan(){
-      const r = [...document.querySelectorAll('input[name="parts"]')].find(x => x.checked);
-      return r ? r.value : 'provide';
-    }
-    function goBook(){
-      const plan = selectedPartsPlan();
-      const url = (plan === 'source')
-        ? 'https://calendly.com/blaxorus-blaxorus/we-provide-parts'
-        : 'https://calendly.com/blaxorus-blaxorus/you-provide-parts';
-      window.open(url, '_blank');
-    }
+    // parts note
+    const plan = [...document.querySelectorAll('input[name="parts"]')].find(r=>r.checked)?.value;
+    const noteEl = document.getElementById('est-parts-note');
+    const noteBox = document.getElementById('sum-note');
+    const noteText = plan === 'source'
+      ? 'Parts at our cost — please book 4+ days ahead.'
+      : 'Have your parts on-site at your appointment.';
+    if(noteEl) noteEl.textContent = total === 0 ? 'Select services above' : noteText;
 
-    // initialize
+    // book button URL
+    const btn = document.getElementById('est-book-btn');
+    if(btn) btn.href = plan === 'source'
+      ? 'https://calendly.com/blaxorus-blaxorus/we-provide-parts'
+      : 'https://calendly.com/blaxorus-blaxorus/you-provide-parts';
+
+    // summary sidebar
+    const sl = document.getElementById('sum-lines');
+    if (lines.length === 0) {
+      sl.innerHTML = '<div class="sum-empty">No services selected yet.</div>';
+      if(noteBox) noteBox.style.display='none';
+    } else {
+      sl.innerHTML = lines.map(l=>`<div class="sum-line"><span class="sk">${l.n}</span><span class="sv">${l.v}</span></div>`).join('') +
+        `<div class="sum-line" style="border-top:1px solid var(--lime); padding-top:10px; margin-top:4px;">
+          <span style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:16px; text-transform:uppercase;">Labor Total</span>
+          <span style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:22px; color:var(--lime);">${money(total)}</span>
+        </div>`;
+      if(noteBox){ noteBox.style.display='block'; noteBox.textContent = noteText + ' Final quote confirmed by text after booking.'; }
+    }
+  }
+
+  function resetEst() {
+    ['c-oil','c-pads','c-rotors','c-plugs','c-batt','c-air','c-susp'].forEach(id=>{
+      const el = document.getElementById(id); if(el) el.checked = false;
+    });
+    enableSel('sel-pads', false);
+    enableSel('sel-rotors', false);
     calc();
-  </script>
+  }
+
+  calc();
+
+  // --- SCROLL REVEAL ---
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => io.observe(r));
+
+  // --- HIDE CTA BAR NEAR FOOTER ---
+  const ctaBar = document.getElementById('ctaBar');
+  const footerEl = document.querySelector('footer');
+  const barObs = new IntersectionObserver(entries => {
+    ctaBar.style.opacity = entries[0].isIntersecting ? '0' : '1';
+    ctaBar.style.pointerEvents = entries[0].isIntersecting ? 'none' : '';
+  }, { threshold: 0.1 });
+  if(footerEl) barObs.observe(footerEl);
+</script>
 </body>
 </html>
