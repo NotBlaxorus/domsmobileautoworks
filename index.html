@@ -3,8 +3,34 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Dom's Mobile AutoWorks | Mobile Mechanic – Sonoma County</title>
-  <meta name="description" content="Dom's Mobile AutoWorks – honest mobile mechanic serving Santa Rosa & Sonoma County. Oil changes, brakes, suspension, batteries & more. We come to you."/>
+  <title>Mobile Mechanic in Santa Rosa, CA | Dom's Mobile AutoWorks</title>
+  <meta name="description" content="Honest mobile mechanic serving Santa Rosa & Sonoma County. Oil changes, brakes, batteries, suspension & diagnostics — we come to you. Up-front pricing. Call (415) 852-1455."/>
+  <link rel="canonical" href="https://domsmobileautoworks.com/"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="theme-color" content="#c8f135"/>
+
+  <!-- Geo targeting -->
+  <meta name="geo.region" content="US-CA"/>
+  <meta name="geo.placename" content="Santa Rosa"/>
+  <meta name="geo.position" content="38.4405;-122.7141"/>
+  <meta name="ICBM" content="38.4405, -122.7141"/>
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Dom's Mobile AutoWorks"/>
+  <meta property="og:title" content="Mobile Mechanic in Santa Rosa, CA | Dom's Mobile AutoWorks"/>
+  <meta property="og:description" content="Honest mobile mechanic serving Santa Rosa & Sonoma County. Oil, brakes, batteries, suspension & diagnostics — we come to you. Up-front pricing."/>
+  <meta property="og:url" content="https://domsmobileautoworks.com/"/>
+  <meta property="og:image" content="https://domsmobileautoworks.com/photos/job1.jpg"/>
+  <meta property="og:image:alt" content="Dom's Mobile AutoWorks on-site auto repair"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Mobile Mechanic in Santa Rosa, CA | Dom's Mobile AutoWorks"/>
+  <meta name="twitter:description" content="Honest mobile mechanic serving Santa Rosa & Sonoma County. We come to you — up-front pricing, no upsells."/>
+  <meta name="twitter:image" content="https://domsmobileautoworks.com/photos/job1.jpg"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,13 +40,67 @@
   {
     "@context":"https://schema.org",
     "@type":"AutomotiveBusiness",
+    "@id":"https://domsmobileautoworks.com/#business",
     "name":"Dom's Mobile AutoWorks",
+    "image":"https://domsmobileautoworks.com/photos/job1.jpg",
+    "logo":"https://domsmobileautoworks.com/photos/job1.jpg",
     "url":"https://domsmobileautoworks.com",
-    "areaServed":["Sonoma County","Santa Rosa","Rohnert Park","Cotati","Petaluma","Windsor","Sebastopol"],
     "telephone":"+1-415-852-1455",
+    "email":"booking@domsmobileautoworks.com",
     "priceRange":"$$",
-    "description":"Mobile mechanic for oil changes, brake service, suspension, batteries, and more. Honest pricing — we come to you.",
-    "openingHours":"Mo-Su 07:00-19:00"
+    "description":"Honest mobile mechanic serving Santa Rosa and Sonoma County. Oil changes, brakes, batteries, suspension, spark plugs, diagnostics and more — we come to you, with up-front pricing and no upsells.",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Santa Rosa",
+      "addressRegion":"CA",
+      "postalCode":"95401",
+      "addressCountry":"US"
+    },
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":38.4405,
+      "longitude":-122.7141
+    },
+    "areaServed":["Sonoma County","Santa Rosa","Rohnert Park","Cotati","Petaluma","Windsor","Sebastopol","Novato"],
+    "openingHoursSpecification":[{
+      "@type":"OpeningHoursSpecification",
+      "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens":"07:00",
+      "closes":"19:00"
+    }],
+    "sameAs":[
+      "https://www.yelp.com/biz/doms-mobile-autoworks-santa-rosa",
+      "https://www.facebook.com/doms.mobile.auto.repairs"
+    ],
+    "hasOfferCatalog":{
+      "@type":"OfferCatalog",
+      "name":"Mobile Auto Services",
+      "itemListElement":[
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile Oil Change"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Brake Pad & Rotor Replacement"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Battery Testing & Replacement"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Suspension Repair"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Spark Plug Replacement"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vehicle Diagnostics"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"General Maintenance"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"How does parts pricing work?","acceptedAnswer":{"@type":"Answer","text":"If we source your parts, you pay exactly what we pay — no markup. You'll see a parts estimate alongside the labor quote before we show up. Prefer to supply your own OEM or OEM-spec parts? That's fine — we'll install them."}},
+      {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"We cover Sonoma County including Santa Rosa, Rohnert Park, Cotati, Sebastopol, Petaluma, Windsor, and Novato. Further out? Message us and we'll do our best to accommodate."}},
+      {"@type":"Question","name":"Do you work at apartments?","acceptedAnswer":{"@type":"Answer","text":"Yes, as long as the property permits on-site maintenance and there's enough flat space to work safely. Most surface lots and driveways work just fine."}},
+      {"@type":"Question","name":"What payment methods do you accept?","acceptedAnswer":{"@type":"Answer","text":"Card, Apple Pay, Venmo, Zelle, or cash — your choice. A text invoice is provided for every job."}},
+      {"@type":"Question","name":"Can you work on any vehicle?","acceptedAnswer":{"@type":"Answer","text":"Most domestic and Japanese makes are no problem. European vehicles and modified or performance builds may need a custom quote first. When in doubt, just ask and we'll let you know upfront."}},
+      {"@type":"Question","name":"How long does a typical job take?","acceptedAnswer":{"@type":"Answer","text":"An oil change runs 30–45 minutes. Brakes per axle usually take 45–75 minutes. Spark plugs 30–60 minutes depending on the engine layout. We'll give you a time window when you book."}}
+    ]
   }
   </script>
 
