@@ -21,25 +21,110 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org", "@type":"AutomotiveBusiness",
-    "@id":"https://domsmobileautoworks.com/#business", "name":"Dom’s Mobile AutoWorks",
-    "url":"https://domsmobileautoworks.com/", "telephone":"+17072898310",
-    "image":"https://domsmobileautoworks.com/photos/dom-at-work.jpg", "foundingDate":"2025",
-    "description":"Mobile automotive diagnostics and repairs at your location in Santa Rosa and Sonoma County.",
-    "address":{"@type":"PostalAddress","addressLocality":"Santa Rosa","addressRegion":"CA","addressCountry":"US"},
-    "areaServed":["Santa Rosa","Sonoma County","Rohnert Park","Cotati","Petaluma","Windsor","Sebastopol"],
-    "sameAs":["https://www.yelp.com/biz/doms-mobile-autoworks-santa-rosa","https://www.facebook.com/61595489049668"],
-    "hasOfferCatalog":{"@type":"OfferCatalog","name":"Mobile mechanic services","itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vehicle diagnostics and no-start diagnosis"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Brake repair"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Battery, starter and alternator testing and replacement"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cooling system repair"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Suspension and steering repair"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tune-ups and maintenance"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pre-purchase vehicle inspection"}}
-    ]}
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "@id": "https://domsmobileautoworks.com/#business",
+  "name": "Dom’s Mobile AutoWorks",
+  "url": "https://domsmobileautoworks.com/",
+  "telephone": "+17072898310",
+  "image": "https://domsmobileautoworks.com/photos/dom-at-work.jpg",
+  "foundingDate": "2025",
+  "description": "Mobile automotive diagnostics and repairs at your location in Santa Rosa and Sonoma County.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Santa Rosa",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    "Santa Rosa",
+    "Sonoma County",
+    "Rohnert Park",
+    "Cotati",
+    "Petaluma",
+    "Windsor",
+    "Sebastopol"
+  ],
+  "sameAs": [
+    "https://www.yelp.com/biz/doms-mobile-autoworks-santa-rosa",
+    "https://www.facebook.com/61595489049668",
+    "https://www.google.com/maps/place/Dom's+Mobile+AutoWorks/data=!4m2!3m1!1s0x0:0x37c540a31453d861"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mobile mechanic services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vehicle diagnostics and no-start diagnosis"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Brake repair"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Battery, starter and alternator testing and replacement"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cooling system repair"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Suspension and steering repair"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tune-ups and maintenance"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pre-purchase vehicle inspection"
+        }
+      }
+    ]
+  },
+  "email": "booking@domsmobileautoworks.com",
+  "hasMap": "https://www.google.com/maps/place/Dom's+Mobile+AutoWorks/data=!4m2!3m1!1s0x0:0x37c540a31453d861",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "10:00",
+      "closes": "19:30"
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -56,19 +141,19 @@
         <h1 id="hero-title">Car trouble?<br><span>I’ll come to you.</span></h1>
         <p class="intro">I’m Dom, your local mobile mechanic. Diagnostics, brakes and repairs at your home, workplace or wherever your vehicle is parked.</p>
         <div class="actions"><a class="button primary" href="tel:+17072898310">Call Dom <span aria-hidden="true">↗</span></a><a class="button secondary" href="sms:+17072898310">Text Dom <span aria-hidden="true">↗</span></a></div>
-        <p class="hero-note">Tell me what’s going on. We’ll talk through the next step.</p>
+        <p class="hero-note">Open daily, 10 AM–7:30 PM. Visits by appointment.</p>
       </div>
       <figure class="hero-photo"><img src="photos/dom-at-work.jpg" alt="Dom in his Mobile AutoWorks shirt working on a customer’s Honda brakes" width="1200" height="1600" fetchpriority="high"><figcaption><span>DOM’S MOBILE AUTOWORKS</span><span>We come to you.</span></figcaption></figure>
     </section>
     <section class="section services" id="services" aria-labelledby="services-title"><div class="container">
-      <div class="section-heading"><div><p class="eyebrow">WHAT I CAN HELP WITH</p><h2 id="services-title">Let’s get you moving.</h2></div><p>Car won’t start? Brakes making noise?<br>Call or text with your vehicle and symptoms.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">WHAT I CAN HELP WITH</p><h2 id="services-title">Mobile mechanic services.</h2></div><p>Car won’t start? Brakes making noise?<br>Call or text with your vehicle and symptoms.</p></div>
       <div class="service-list">
-        <article><span class="service-number" aria-hidden="true">01</span><div><h3>Diagnostics &amp; no-starts</h3><p>Check engine lights, starting problems and electrical diagnosis.</p></div></article>
-        <article><span class="service-number" aria-hidden="true">02</span><div><h3>Brakes</h3><p>Brake inspections, pads and rotors, and diagnosis of noise or vibration.</p></div></article>
+        <article><span class="service-number" aria-hidden="true">01</span><div><h3><a href="mobile-diagnostics-santa-rosa.html">Diagnostics &amp; no-starts ↗</a></h3><p>Check engine lights, starting problems and electrical diagnosis.</p></div></article>
+        <article><span class="service-number" aria-hidden="true">02</span><div><h3><a href="mobile-brake-repair-santa-rosa.html">Brakes ↗</a></h3><p>Brake inspections, pads and rotors, and diagnosis of noise or vibration.</p></div></article>
         <article><span class="service-number" aria-hidden="true">03</span><div><h3>Starting &amp; charging</h3><p>Battery, starter and alternator testing and replacement.</p></div></article>
         <article><span class="service-number" aria-hidden="true">04</span><div><h3>Cooling systems</h3><p>Coolant leaks, overheating, water pumps and thermostats.</p></div></article>
         <article><span class="service-number" aria-hidden="true">05</span><div><h3>Suspension &amp; steering</h3><p>Shocks, struts, control arms and other suspension repairs.</p></div></article>
-        <article><span class="service-number" aria-hidden="true">06</span><div><h3>Tune-ups &amp; inspections</h3><p>Spark plugs, oil changes, routine maintenance and pre-purchase inspections.</p></div></article>
+        <article><span class="service-number" aria-hidden="true">06</span><div><h3>Tune-ups &amp; inspections</h3><p>Spark plugs, oil changes, routine maintenance and <a href="pre-purchase-inspection-sonoma-county.html">pre-purchase inspections ↗</a>.</p></div></article>
       </div>
       <p class="service-note">Every vehicle and job is different. I’ll confirm the work, pricing and whether it can be done safely on-site before we schedule.</p>
     </div></section>
@@ -82,10 +167,16 @@
     </div></section>
     <section class="section container contact" id="book" aria-labelledby="contact-title">
       <div><p class="eyebrow">LET’S TALK ABOUT YOUR CAR</p><h2 id="contact-title">Call or text.<br><span>Talk directly to Dom.</span></h2><a class="phone-number" href="tel:+17072898310">(707) 289-8310</a><div class="actions"><a class="button primary" href="tel:+17072898310">Call Dom <span aria-hidden="true">↗</span></a><a class="button secondary" href="sms:+17072898310">Text Dom <span aria-hidden="true">↗</span></a></div></div>
-      <div class="contact-details"><h3>For a faster answer, send:</h3><ul><li>Your vehicle’s year, make and model</li><li>What it’s doing or the repair you need</li><li>Your city and where the vehicle is parked</li></ul><div class="coverage"><h3>Based in Santa Rosa.</h3><p>Serving Sonoma County, including Rohnert Park, Cotati, Petaluma, Windsor and Sebastopol. Text your location to confirm coverage and availability.</p></div><p class="small">Visits by appointment. Repairs need a safe, suitable work area and permission from the property owner.</p></div>
+      <div class="contact-details"><h3>For a faster answer, send:</h3><ul><li>Your vehicle’s year, make and model</li><li>What it’s doing or the repair you need</li><li>Your city and where the vehicle is parked</li></ul><div class="coverage"><h3>Based in Santa Rosa.</h3><p>Serving Sonoma County, including Rohnert Park, Cotati, Petaluma, Windsor and Sebastopol. Text your location to confirm coverage and availability.</p></div><p class="small"><strong>Hours: 10 AM–7:30 PM every day.</strong> Visits by appointment. Repairs need a safe, suitable work area and permission from the property owner.</p></div>
+    </section>
+    <section class="section container questions" aria-labelledby="questions-title">
+      <p class="eyebrow">BEFORE YOU BOOK</p><h2 id="questions-title">A few common questions.</h2>
+      <details><summary>Can you work on my car at home?</summary><p>Many repairs and diagnostic jobs can be done at your home or workplace. Send your vehicle details, symptoms and location so I can confirm access and whether the job is suitable for mobile service.</p></details>
+      <details><summary>How do I get a price?</summary><p>Call or text <a href="tel:+17072898310">(707) 289-8310</a> with your year, make, model, symptoms and city. I’ll discuss the work and cost with you before we book. A warning light or noise alone doesn’t identify which part needs replacement.</p></details>
+      <details><summary>Which areas do you serve?</summary><p>I’m based in Santa Rosa and serve Sonoma County, including Rohnert Park, Cotati, Windsor, Sebastopol and Petaluma. Text your location to confirm travel and appointment availability. Hours are 10 AM–7:30 PM every day.</p></details>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year">2026</span> Dom’s Mobile AutoWorks<br><span>Santa Rosa, CA · Serving Sonoma County</span></p><div><a href="https://www.yelp.com/biz/doms-mobile-autoworks-santa-rosa">Yelp</a><a href="https://www.facebook.com/61595489049668">Facebook</a><a href="sms-terms.html">SMS terms &amp; privacy</a></div></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year">2026</span> Dom’s Mobile AutoWorks<br><span>Santa Rosa, CA · Serving Sonoma County</span></p><div><a href="https://www.google.com/maps/place/Dom&#x27;s+Mobile+AutoWorks/data=!4m2!3m1!1s0x0:0x37c540a31453d861">Google</a><a href="https://www.yelp.com/biz/doms-mobile-autoworks-santa-rosa">Yelp</a><a href="https://www.facebook.com/61595489049668">Facebook</a><a href="sms-terms.html">SMS terms &amp; privacy</a></div></div></footer>
   <nav class="mobile-contact" aria-label="Call or text Dom"><a href="tel:+17072898310">Call Dom</a><a href="sms:+17072898310">Text Dom</a></nav>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
